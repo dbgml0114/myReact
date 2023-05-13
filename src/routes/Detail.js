@@ -13,7 +13,7 @@ function Detail() {
     setDetailMovies(json.data.movie);
     setLoading(false);
   };
-  console.log(detailMovies);
+  //console.log(detailMovies);
 
   useEffect(() => {
     getMovie();
