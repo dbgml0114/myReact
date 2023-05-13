@@ -9,7 +9,7 @@ function Movie({ id, coverImg, title, summary, genres }) {
         {/* 3. 컴포넌트 내의 id 는 api 고유값으로 지정되게 바꿉니다.  */}
         <Link to={`/movie/${id}`}>{title}</Link>
       </h2>
-      <p>{summary}</p>
+      <p>{summary.length > 235 ? `${summary.slice(0, 235)}...` : summary}</p>
       <ul>
         {genres.map((g) => (
           <li key={g}>{g}</li>
